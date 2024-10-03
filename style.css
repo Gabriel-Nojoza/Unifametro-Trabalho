@@ -1,0 +1,249 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Jost', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #006400;
+    padding: 5px 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 1;
+    transition: background-color 0.3s ease; /* Adiciona transição ao cabeçalho */
+    position: relative;
+}
+/* imagem unifametro */ 
+.logo{
+    position: absolute;
+    bottom: 100; /* Ajustado para que a logo esteja no fundo do cabeçalho */
+    left: 6%; /* Ajuste conforme necessário */
+    margin-top: 170px;
+    transform: translateX(-50%);
+    padding: 10px 0;
+   left: -3px;
+    width: 3px;
+}
+.logo img {
+    max-width: 190px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    padding: 10px;
+    padding: 5px; /* Adiciona um pequeno preenchimento em torno da imagem */
+}
+.navmenu {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    justify-content: flex-end;
+    right: 10px;
+    top: 10px;
+}
+.navmenu a {
+    color: #fcfcfc;
+    font-size: 10px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+    transition: all 0.42s ease;
+    text-decoration: none; /* Remove sublinhado */
+    transition: all 0.3s ease;
+}
+.navmenu a:hover {
+    background-color: #ffffff; /* Fundo branco ao passar o mouse */
+    color: #006400; /* Cor do texto ao passar o mouse */
+}
+.nav-icon {
+    position: absolute;
+    top: 10px; /* Ajuste para a distância do topo */
+    left: 10px; /* Ajuste para a distância do lado esquerdo */ 
+    z-index: 1001; /* Para garantir que fique acima de outros elementos */
+    z-index: 999; /* Menor que o cabeçalho para garantir que fique abaixo dele */
+}
+.nav-icon i { /* ícones de rede social */
+    margin-right: 15px;
+    color: #f0f0f0;
+    font-size: 15px; /* tamanho do logo*/ 
+    font-weight: 400;
+    transition: all .42s ease;
+    left: 10%;
+}
+.nav-icon i:hover { /* ícones de rede social */ 
+    background-color: #ffffff; /* Fundo branco ao passar o mouse */
+    color: #006400; /* Cor do ícone com o fundo branco */
+    padding: 8px; /* Cria um efeito de "bloco" ao redor dos ícones */
+    border-radius: 50%; /* Faz com que o fundo tenha bordas arredondadas */
+}
+#menu-icon {
+    font-size: 10px;
+    color: #ffffff;
+    z-index: 10001;
+    cursor: pointer;
+    left: 50px;
+    left: 10px;
+}
+.navmenu a:hover {
+    color: #006400; /* Cor dos links ao passar o mouse */
+}
+/* navegaçao de menu do portal */ 
+.bottom-nav {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    background-color: #ffffff; /* Cor de fundo */
+    padding: 15px; /* Ajuste o padding conforme necessário */
+    position: fixed;
+    top: 70px; /* Ajuste para posicionar logo abaixo do cabeçalho */
+    width: 100%;
+    z-index: 999; /* Menor que o cabeçalho para garantir que fique abaixo dele */
+    left: 0; /* Alinha o menu à esquerda */
+    position: relative;
+    margin: 0px;
+}
+.bottom-navmenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Centraliza horizontalmente */
+    max-width: 1000px; /* Limita a largura máxima */
+    gap: 15px;/* espaço entre as palavras */ 
+}
+.bottom-navmenu a {
+    color: #006400; /* cor das letras */ 
+    font-size: 15px; /* Ajuste o tamanho conforme necessário das letras */
+    text-transform: capitalize;
+    padding: 18px 2px; /* tamanho do efeito */ 
+    font-weight: 400;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none; /* Remove sublinhado */
+    margin: 10px 1px; /* Margem à esquerda e direita */
+    border-radius: 20px; /* Bordas arredondadas */
+    border: 2px solid transparent; /* Borda inicial */
+    margin-top: -60px; /* para subir o menur das palavras */ 
+}
+.bottom-navmenu a:hover {
+    background-color: #006400; /* Cor de fundo verde ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
+.bottom-navmenu .subscribe:hover {
+    background-color: #ff66008e; /* Cor de fundo laranja ao passar o mouse no "INSCREVA-SE" */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
+/* Parte da imagem dos alunos */
+.fixed-image {
+    text-align: center; /* Centraliza a imagem horizontalmente */
+    position: relative; /* A imagem ficará em relação ao fluxo natural da página */
+    margin-top: 30px; /* Espaço em relação à barra de navegação */
+    overflow: hidden; /* Garante que nada vaze para fora */
+    margin-bottom: 10px; /* Espaço suficiente para evitar que a imagem entre no bottom-navmenu */
+    padding-bottom: 100px; /* Adiciona um espaço adicional ao final da imagem para garantir que não invada o menu */
+    z-index: 1; /* Garante que a imagem fique atrás de outros elementos importantes, se necessário */
+    width: 100%;
+    
+}
+.fixed-image img {
+    max-width: none; /* Garante que a imagem não ultrapasse o tamanho da tela */
+    width: 100%; /* A imagem ocupa 100% da largura do contêiner */
+    display: block;
+    margin: 0 auto; /* Garante que a imagem fique centralizada */
+    height: auto; /* Mantém a proporção da imagem */
+    z-index: 999; /* Menor que o cabeçalho para garantir que fique abaixo dele */
+}
+/* texto area do aluno */ 
+.student-area {
+    position: relative; /* Fixa a posição da seção na tela */
+    padding: 10px 20px; /* Ajusta o espaçamento superior para diminuir a altura */
+    font-family: Arial, sans-serif; /* Fonte do texto */
+    border-top-right-radius: 10px; /* Bordas arredondadas no canto superior direito */
+    box-shadow: none; /* Remove a sombra para dar um efeito mais limpo */
+    z-index: 900; /* Garante que a seção fique acima de outros elementos */
+}
+.green-title {
+    color: #006400; /* Cor verde para o título */
+    font-size: 60px; /* Tamanho da fonte do título */
+    margin-top: -110px; /* Move o título mais para cima */
+    margin-bottom: 10px; /* Reduz o espaço abaixo do título */
+    text-align: justify;
+}
+.orange-text {
+    color: orange; /* Cor laranja para o texto de boas-vindas */
+    font-size: 25px; /* Tamanho da fonte do texto */
+    font-weight: bold; /* Estilo em negrito */
+    margin-bottom: 15px;
+    text-align:justify;
+}
+.info-text {
+    margin-top: 5px; /* Espaço acima da seção de informações */
+    font-size: 16px; /* Tamanho da fonte */
+    line-height: 1.5; /* Aumenta a altura da linha para melhor legibilidade */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    color: #333; /* Cor do texto */
+    padding-left: 20px;
+    font-family: 'Arial', sans-serif; /* Altere 'Arial' para a fonte desejada */
+}
+
+.info-text p {
+    margin: 2px 0; /* Espaço entre os parágrafos */
+}
+
+/* pedding das opçoes */
+.quick-access {
+    position: absolute;
+    bottom: -500px; /* Ajuste para a posição desejada */
+    right: 10px; /* Para ficar no canto direito */
+    display: grid; /* Usar grid para organização */
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 10px; /* Espaço entre os quadrados */
+    z-index: 1000; /* Certifique-se de que está acima de outros elementos */
+    margin: 0 auto;
+    width: calc(55% - 25px); /* Define a largura da grid (ajuste 40px conforme necessário) */
+}
+.square {
+    height: 80px; /* Altura do quadrado */
+    background-color: #006400; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; /* Bordas arredondadas */
+    text-align: center;
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito para destaque */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+/* Estilo para o hover */
+.square:hover {
+    background-color: #006400; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-5px); /* Efeito de elevação */
+}
+/* Alinhamento do Estacionamento */
+.quick-access .square:nth-child(7) {
+    grid-column: 1 / -1; /* Faz o último quadrado ocupar toda a largura */
+}
+/* Adicionando estilo específico para links (opcional) */
+.quick-access a {
+    text-decoration: none; /* Remove sublinhado */
+    color: #ffffff; /* Mantém a cor do texto */
+    height: 80px; /* Altura do quadrado */
+    display: flex; /* Flexbox para centralizar o texto */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+/* Estilo para o hover no link */
+.quick-access a:hover {
+    background-color: #006400; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-5px); /* Efeito de elevação */
+}
